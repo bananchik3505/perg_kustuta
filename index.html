@@ -6,8 +6,27 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <!-- <script src="script.js"></script> -->
-    <script>
-        alert("Tere tulemast PERGi veebilehele!");
+     <script>
+        /*alert("Tere tulemast PERGi veebilehele!");*/
+        /*console.log("PERGi veebileht 2.0 - parem kui varem");*/
+        /*function kaunter() {
+            let clickCountElement = document.getElementById("clickCount");
+            let clickCount = parseInt(clickCountElement.textContent);
+            clickCount++;
+            clickCountElement.textContent = clickCount;
+        }*/
+        window.onload = function() {
+            let algne = document.getElementById("clickCount");
+            algne.innerHTML = localStorage.getItem("clic") || 0;
+         }
+
+       function kaunter() {
+        let algne = document.getElementById("clickCount");
+        let tulemus = Number(algne.innerHTML) + 1;
+        algne.innerHTML = tulemus;
+
+        localStorage.setItem("clic", tulemus);
+       }
     </script>
     <style>
         
@@ -20,13 +39,15 @@
         <a href="kontakt.html">kontakt</a>
     </div>
 
+    <h2>Klikke kokku: <span id="clickCount">0</span></h2>
+
     <h1>PERG vibez</h1>
     <br>
     <p>PERGi veebileht 2.0 - parem kui varem</p>
     <hr>
     <a href="https://perg.ee">tasuta skämm</a>
     <br>
-    <img src="pic/skämm.jpg" alt="suuuuur skämm">
+    <img src="pic/skämm.jpg" alt="suuuuur skämm" onclick="kaunter()">
 
 </body>
 </html>

@@ -1,8 +1,16 @@
 body{
     max-width: 50em;
     margin: 0 auto;
-    background-color: rgb(225, 236, 225);
+    background-color: rgb(177, 222, 177);
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1{
+    text-align: center;
+    color: rgb(45, 30, 0);
+}
+h2{
+    text-align: center;
+    color: rgb(45, 31, 0);
 }
 .nav a{
     display: flex;
